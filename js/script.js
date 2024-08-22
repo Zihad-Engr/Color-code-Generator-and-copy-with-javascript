@@ -50,17 +50,15 @@ return genBgColorHex;
 Copy.addEventListener('click',(e)=>{
     navigator.clipboard.writeText(area.value).then(function(e){
         
-        
-        toast.className="tostaniin";
-        setTimeout(function(){
-            toast.className="tostaniout";
-           
-        },1500)
+        toast.className="tostaniin toast";
+    
         copytext1.innerHTML=`Wow!`
         copytext.innerHTML=`{${area.value}} code is copied `
     });
   
     
 })
-
+toast.addEventListener('click',()=>{
+    toast.className="tostaniout toast";
+})
 
