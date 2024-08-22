@@ -3,6 +3,9 @@ let changeHex=document.querySelector('#changeHex');
 let body=document.querySelector('body');
 let Copy=document.querySelector('#Copy');
 let area=document.querySelector('#area');
+let copytext=document.querySelector('#copytext');
+let copytext1=document.querySelector('#copytext1');
+let toast=document.querySelector('#toast');
 
 
 //  RGB Genetor 
@@ -46,7 +49,12 @@ return genBgColorHex;
 
 Copy.addEventListener('click',(e)=>{
     navigator.clipboard.writeText(area.value).then(function(e){
-        alert("Your Code is copy!")
+        toast.style.right="0";
+        setTimeout(function(){
+            toast.style.right="-9999999px";
+        },1500)
+        copytext1.innerHTML=`Wow!`
+        copytext.innerHTML=`{${area.value}} code is copied `
     });
   
     

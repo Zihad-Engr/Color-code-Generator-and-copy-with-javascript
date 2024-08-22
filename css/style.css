@@ -7,9 +7,8 @@
 body{
     width:100vw;
     height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+   
+    
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -40,16 +39,58 @@ button:hover{
     font-weight: 500;
     border:0;
     border-radius:10px;
-    margin:0px 10px;
+   
 }
-#flex{
+
+#flexs{
+    height:100vh;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+    flex-direction:column;
+    gap:10px;
+}
+ .bg{
     background-color: rgba(0,0,0,0.5);
     border:1px solid #ddd;
     width:100vw;
     padding:20px 0px;
-    column-gap:50px;
- 
+   display:flex;
+   justify-content: center;
+   align-items: center;
+    gap:10px;
+    
+} 
+
+#toast{
+    background-color:rgb(255, 255, 255);
+    padding:100px;
+    color:#fff;
+    width:500px;
+    text-align: center;
+    box-shadow: 1px 1px 50px rgb(0, 0, 0);
+    color:#333;
+    position:fixed;
+    top:0;
+    right:-9999999px;
+   
 }
+
+
+
+h1{
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    background-color:rgba(0, 0,0, 0.2);
+    padding:20px;
+   
+}
+
+/* @keyframes animationtoast{
+    from{
+        right:-9999999px;
+    }
+
+    to{
+        right:0;
+    }
+} */
